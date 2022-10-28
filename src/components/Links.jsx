@@ -1,4 +1,6 @@
 import Card from "./shared/Card"
+import Slack from "../img/slack.png"
+import Github from "../img/github.png"
 
 function Links() {
 
@@ -22,7 +24,12 @@ function Links() {
                 </Card>
             )
         })}
-   
+        <br />
+        <div className="d-flex justify-content-center">
+            <div className="me-5"><img src={Slack} alt="" /></div>
+            <div><img src={Github} alt="" /></div>
+        </div>
+        <div className="space"></div>
     </div>
   )
 }

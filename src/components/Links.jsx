@@ -16,11 +16,11 @@ function Links() {
     <div className="container">
       {texts.map((text) => {
         return (
+          <a href={text.href} target="_blank" rel="noreferrer" className="cardText">
           <Card key={text.id}>
-            <a href={text.href} target="_blank" className="cardText">
               {text.text}
-            </a>
           </Card>
+          </a>
         );
       })}
       <br />

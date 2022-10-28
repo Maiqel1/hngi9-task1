@@ -4,7 +4,7 @@ import Github from "../img/github.png";
 
 function Links() {
   const texts = [
-    { id: "", text: "Twitter Link", href: "https://twitter.com/Maiq_el/" },
+    { id: "my_twitter", text: "Twitter Link", href: "https://twitter.com/Maiq_el/" },
     { id: "btn_zuri", text: "Zuri Team", href: "https://training.zuri.team/" },
     {id: "books", text: "Zuri Books", href : "http://books.zuri.team" },
     {id: "book__python", text: "Python Books", href : "http://books.zuri.team" },

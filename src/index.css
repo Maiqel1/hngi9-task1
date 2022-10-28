@@ -52,6 +52,11 @@ text-decoration: none;
 color: black;
 }
 
+.cardText:hover {
+  text-decoration: underline;
+  color: #667085;
+}
+
 footer p {
   font-family: 'Inter';
 font-style: normal;

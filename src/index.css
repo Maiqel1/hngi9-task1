@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-
+.profile{
+width: 88px;
+height: 88px;
+border-radius: 275px;
+background-image: url(./img/profile.jpg);
+background-position: center center;
+background-size: contain;
+}
 
 .customCard{
   box-sizing: border-box;

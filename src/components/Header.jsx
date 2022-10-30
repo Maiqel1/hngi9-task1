@@ -1,12 +1,13 @@
-import Image from "../img/profile__img.png";
 
 function Header() {
   return (
     <div className="container">
       <header className="text-center">
-        <img src={Image} id="profile__img" alt="" className="img-fluid" />
+        <div id="profile__img" className="profile mx-auto">
+
+        </div>
         <p className="headerText" id="twitter">
-          Annette Black
+          Maiqel
         </p>
 
         {/* SLACK USERNAME: MAIQEL */}

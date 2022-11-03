@@ -24,7 +24,7 @@ function Links() {
           </a>
         );
       })}
-        <Link className="cardText" to='./contact'>
+        <Link className="cardText" to='/contact'>
           <Card>
             Contact Me
           </Card>

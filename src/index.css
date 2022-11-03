@@ -99,8 +99,33 @@ footer p:hover {
 
 /* Contact page */
 
-.contactHeader{
+.contactHeader h1{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  /* identical to box height, or 122% */
   
+  letter-spacing: -0.02em;
+  
+  /* Gray/900 */
+  
+  color: #101828;
+}
+
+.contactHeader p{
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height, or 150% */
+
+
+/* Gray/600 */
+
+color: #475467;
 }
 
 

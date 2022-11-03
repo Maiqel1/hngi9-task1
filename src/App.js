@@ -10,9 +10,14 @@ function App() {
   return (
     <>
     <Router>
-      <Header/>
         <Routes>
-          <Route exact path='/' element={<Links/>}>
+          <Route exact path='/' element={
+          <>
+          <Header/>
+          <Links/>
+          
+          </>
+        }>
 
           </Route>
         <Route path='/contact' element={

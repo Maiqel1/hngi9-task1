@@ -16,7 +16,7 @@ function Header() {
                 </section>
             </div>
             <div className="pe-5">
-                <a href="">
+                <a href="#">
                 <div className="share">
                     <img src={Icon} alt="" className="d-none d-md-block mx-auto mt-2"/>
                     <img src={Icon2} alt="" className="d-block d-md-none mx-auto mt-3" />

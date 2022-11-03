@@ -1,6 +1,7 @@
 import Card from "./shared/Card";
 import Slack from "../img/slack.png";
 import Github from "../img/github.png";
+import {Link} from 'react-router-dom'
 
 function Links() {
   const texts = [
@@ -23,6 +24,12 @@ function Links() {
           </a>
         );
       })}
+        <Link className="cardText">
+          <Card>
+            Contact Me
+          </Card>
+        </Link>
+      
       <br />
       <div className="d-flex justify-content-center">
         <div className="me-5">

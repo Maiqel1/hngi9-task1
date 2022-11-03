@@ -59,7 +59,7 @@ function Contact() {
           </section>
           <br></br>
           <section className="d-flex">
-            <input className="checkInput" />
+            <input type='checkbox' className="checkInput" />
             <p className="checkText ms-1 ms-md-3">
               You agree to providing your data to Maiqel who may contact you.
             </p>

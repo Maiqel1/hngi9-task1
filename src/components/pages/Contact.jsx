@@ -67,7 +67,7 @@ function Contact() {
 
           <button
           type="submit"
-            id="message"
+            id="btn__submit"
             className="btn btn-lg btn-primary text-white col-12 d-flex justify-content-center "
           >
             Send Message

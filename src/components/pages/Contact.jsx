@@ -1,4 +1,8 @@
 function Contact() {
+
+  const name = "Maiqel"
+
+
   return (
     <>
       <br /><br />
@@ -61,7 +65,7 @@ function Contact() {
           <section className="d-flex">
             <input type='checkbox' className="checkInput" />
             <p className="checkText ms-1 ms-md-3">
-              You agree to providing your data to Maiqel who may contact you.
+              {`You agree to providing your data to ${name} who may contact you.`}
             </p>
           </section>
 

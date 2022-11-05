@@ -1,12 +1,11 @@
 import { useState } from "react";
 import {toast} from 'react-toastify'
-import { useNavigate } from "react-router-dom";
 
 function Contact() {
 
-  const navigate = useNavigate()
-
-    const [formData, setFormData] = useState({
+  const [disabled, setDisabled] = useState(true);
+  const [checked, setChecked] = useState(false);
+  const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
     email: "",
@@ -24,11 +23,38 @@ function Contact() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    navigate('/')
     toast.success('We have received your feedback')
   };
 
-  
+  const formChange = () => {
+    // if (!first_name / !last_name / !email / !message) {
+    //   setDisabled(true);
+    // } else if(checked === false){
+    //   setDisabled(false)
+    // } else{
+    //   setDisabled(true)
+    // }
+
+    if (!first_name) {
+      setDisabled(true)
+    } else if (!last_name) {
+      setDisabled(true)
+    } else if (!email) {
+      setDisabled(true)
+    } else if (!message) {
+      setDisabled(true)
+    } else if (checked === true) {
+      setDisabled(true)
+    } else{
+      setDisabled(false)
+
+    }
+  };
+
+  const handleChecked = (e) => {
+    
+    setChecked((current) => !current);
+  };
 
   return (
     <>
@@ -39,7 +65,7 @@ function Contact() {
           <h1>Contact Me</h1>
           <p>Hi there, contact me to ask me about anything you have in mind.</p>
         </div>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} onChange={formChange}>
           <div className="form row">
             <section className="d-grid d-md-flex row col-md-6 ms-0">
               <label htmlFor="firstName" className="formLabel">
@@ -48,15 +74,14 @@ function Contact() {
               <input
                 type="text"
                 placeholder="Enter your first name"
-                className={!first_name ? 'formInputError' : 'formInput'}
+                className={!first_name ? "formInputError" : "formInput"}
                 id="first_name"
                 onChange={onChange}
                 value={first_name}
-                required
               />
-              {/* <p className="text-danger">
-                {error}
-              </p> */}
+              <p className="text-danger">
+                {!first_name ? "Please enter your first Name" : null}
+              </p>
             </section>
 
             <section className="d-grid d-md-flex row col-md-6 ms-0 ms-md-2 mt-3 mt-md-0">
@@ -70,8 +95,10 @@ function Contact() {
                 id="last_name"
                 onChange={onChange}
                 value={last_name}
-                required
               />
+              <p className="text-danger">
+                {!last_name ? "Please enter your last Name" : null}
+              </p>
             </section>
             <div className="space"></div>
           </div>
@@ -90,8 +117,10 @@ function Contact() {
               }
               onChange={onChange}
               value={email}
-              required
             />
+            <p className="text-danger">
+              {!email ? "Please enter your Email" : null}
+            </p>
           </section>
           <br></br>
           <section className="ms-1 ms-md-0">
@@ -108,15 +137,18 @@ function Contact() {
               placeholder="Send me a message and I'll reply you as soon as possible"
               onChange={onChange}
               value={message}
-              required
             ></textarea>
+            <p className="text-danger">
+              {!message ? "Please enter a message" : null}
+            </p>
           </section>
           <br></br>
           <section className="d-flex">
             <input
               type="checkbox"
-              className={'checkInput'}
-              required
+              className={!checked ? 'checkInputError': 'checkInput'}
+              checked={checked}
+              onChange={handleChecked}
             />
             <p className="checkText ms-1 ms-md-3">
               {`You agree to providing your data to ${name} who may contact you.`}
@@ -127,7 +159,7 @@ function Contact() {
             type="submit"
             id="btn__submit"
             className="btn btn-lg btn-primary text-white col-12 d-flex justify-content-center "
-            
+            disabled={disabled}
           >
             Send Message
           </button>

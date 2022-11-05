@@ -262,10 +262,10 @@ color: #475467;
   background: #ffffff;
   border: 1px solid #d0d5dd;
   border-radius: 6px;
-  outline-color: red;
+  
 }
 
-/* .checkInputError {
+.checkInputError {
   box-sizing: border-box;
   width: 20px;
   height: 20px;
@@ -273,7 +273,7 @@ color: #475467;
   border: 1px solid #d0d5dd;
   border-radius: 6px;
   outline-color: red;
-} */
+}
 
 .checkText {
   font-family: "Inter";

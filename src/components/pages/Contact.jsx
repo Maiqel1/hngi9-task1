@@ -4,7 +4,7 @@ import {toast} from 'react-toastify'
 function Contact() {
 
   const [disabled, setDisabled] = useState(true);
-  const [checked, setChecked] = useState(true);
+  const [checked, setChecked] = useState(false);
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
@@ -146,7 +146,7 @@ function Contact() {
           <section className="d-flex">
             <input
               type="checkbox"
-              className="checkInput"
+              className={!checked ? 'checkInputError': 'checkInput'}
               checked={checked}
               onChange={handleChecked}
             />
